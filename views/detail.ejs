@@ -1,0 +1,35 @@
+<%- include("header"); -%>
+
+<body>
+<h1>Detail result</h1>
+<h3><%= data["Title"] %></h3>
+<!-- <p><%= Object.keys(data).length;  %></p> -->
+
+<div class="box">
+
+<%# get all details of this movie %>
+<% for (var key in data) { %>
+<%    if (data.hasOwnProperty(key)) { %>
+<%    if (key=="Ratings"){  %>
+<p><%= key %> :</p>
+<%      for (var i=0;i<data[key].length;i++){ %>
+<p>source------ <%= data[key][i]["Source"] %></p>
+<p>value------ <%= data[key][i]["Value"] %></p>
+<%      } %>
+<%    } else{  %>
+<p><%= key %> : <%= data[key] %></p>
+<%    } %>
+<%    } %>
+<% }  %>
+
+<img id="img1" src=<%= data["Poster"] %> </img>
+
+<br>
+<!-- <a href="/">Search again</a> -->
+<form class="item" action="/" method="get">
+  <button type="submit" class="btn btn-info btn-lg">Search again</button>
+</form>
+</div>
+
+</body>
+<%- include("footer"); -%>

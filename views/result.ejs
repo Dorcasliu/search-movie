@@ -2,30 +2,23 @@
 
 <body>
 
-  <div class="container">
-    <br />
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8">
-        <form class="card card-sm">
-          <div class="card-body row no-gutters align-items-center">
-            <div class="col-auto">
-              <i class="fas fa-search h4 text-body"></i>
-            </div>
-            <!--end of col-->
-            <div class="col">
-              <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search keywords of the movie">
-            </div>
-            <!--end of col-->
-            <div class="col-auto">
-              <button class="btn btn-lg btn-success" type="submit">Search</button>
-            </div>
-            <!--end of col-->
-          </div>
-        </form>
-      </div>
-      <!--end of col-->
-    </div>
-  </div>
+<h1>Search results</h1>
+
+<div class="box">
+<% data["Search"].forEach(function(movie){  %>
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item"><strong><%= movie["Title"] %> </strong> - <%= movie["Year"] %> - <a href="/detail?name=<%= movie["Title"] %>"> More details</a></li>
+  </ul>
+  <img id="img1" src= <%= movie["Poster"] %> </img>
+<% }) %>
+
+<br>
+
+<form class="item" action="/" method="get">
+  <button type="submit" class="btn btn-info btn-lg">Search again</button>
+</form>
+</div>
+
 </body>
 
 <%- include("footer"); -%>

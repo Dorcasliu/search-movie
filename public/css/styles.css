@@ -1,3 +1,16 @@
+h1{
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+  font-weight: bold;
+}
+
+p,h3{
+  margin-left: 70px;
+}
+
 .form-control-borderless {
     border: none;
 }
@@ -13,6 +26,26 @@
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.btn.btn-info.btn-lg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul{
+ text-align: center;
+ font-size: 20px;
+ line-height: 100%;
+ margin-top: 15px;
+}
+
+#img1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 footer {
